@@ -2,9 +2,9 @@ from sqlalchemy import text, ForeignKey, String, Integer
 from sqlalchemy.orm import Mapped, mapped_column
 
 from datetime import datetime
-from matches import Match
-from judges import Judge
-from teams import Team
+from .matches import Match
+from .judges import Judge
+from .teams import Team
 from core.database import Base
 
 

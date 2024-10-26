@@ -6,6 +6,16 @@ from alembic import context
 from core.database import SQLALCHEMY_DATABASE_URL, Base
 from models.users import User
 from models.roles import Role
+from models.teams import Team
+from models.awards import Award
+from models.matches import Match
+from models.participants import Participant
+from models.results import Result
+from models.scores import Score
+from models.team_history import TeamHistory
+from models.team_statistics import TeamStatistics
+from models.judges import Judge
+from models.seasons import Season
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

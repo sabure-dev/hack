@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>770</IntrospectionStateNumber>
+      <IntrospectionStateNumber>783</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
-      <StartupTime>1729945409</StartupTime>
+      <StartupTime>1729949624</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1399,7 +1399,7 @@ true posixrules
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>770</IntrospectionStateNumber>
+      <IntrospectionStateNumber>783</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>dragon</OwnerName>
     </database>
@@ -4826,13 +4826,37 @@ true posixrules
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>770</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-26.12:31:13</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>783</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-26.13:48:16</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="266" parent="265" name="role_id_seq">
+    <sequence id="266" parent="265" name="award_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16662</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="267" parent="265" name="match_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16612</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="268" parent="265" name="result_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16711</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="269" parent="265" name="role_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16430</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4840,7 +4864,47 @@ true posixrules
       <StateNumber>769</StateNumber>
       <OwnerName>dragon</OwnerName>
     </sequence>
-    <sequence id="267" parent="265" name="user_id_seq">
+    <sequence id="270" parent="265" name="score_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16745</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="271" parent="265" name="season_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16636</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="272" parent="265" name="team_history_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16728</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="273" parent="265" name="team_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16602</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="274" parent="265" name="team_statistics_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16650</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>782</StateNumber>
+      <OwnerName>dragon</OwnerName>
+    </sequence>
+    <sequence id="275" parent="265" name="user_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16439</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4848,32 +4912,92 @@ true posixrules
       <StateNumber>769</StateNumber>
       <OwnerName>dragon</OwnerName>
     </sequence>
-    <table id="268" parent="265" name="alembic_version">
+    <table id="276" parent="265" name="alembic_version">
       <ObjectId>16425</ObjectId>
       <StateNumber>768</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dragon</OwnerName>
     </table>
-    <table id="269" parent="265" name="role">
+    <table id="277" parent="265" name="award">
+      <ObjectId>16663</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="278" parent="265" name="judge">
+      <ObjectId>16676</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="279" parent="265" name="match">
+      <ObjectId>16613</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="280" parent="265" name="participant">
+      <ObjectId>16691</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="281" parent="265" name="result">
+      <ObjectId>16712</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="282" parent="265" name="role">
       <ObjectId>16431</ObjectId>
       <StateNumber>769</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dragon</OwnerName>
     </table>
-    <table id="270" parent="265" name="user">
+    <table id="283" parent="265" name="score">
+      <ObjectId>16746</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="284" parent="265" name="season">
+      <ObjectId>16637</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="285" parent="265" name="team">
+      <ObjectId>16603</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="286" parent="265" name="team_history">
+      <ObjectId>16729</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="287" parent="265" name="team_statistics">
+      <ObjectId>16651</ObjectId>
+      <StateNumber>782</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>dragon</OwnerName>
+    </table>
+    <table id="288" parent="265" name="user">
       <ObjectId>16440</ObjectId>
       <StateNumber>769</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dragon</OwnerName>
     </table>
-    <column id="271" parent="268" name="version_num">
+    <column id="289" parent="276" name="version_num">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="272" parent="268" name="alembic_version_pkc">
+    <index id="290" parent="276" name="alembic_version_pkc">
       <ColNames>version_num</ColNames>
       <ObjectId>16428</ObjectId>
       <Primary>1</Primary>
@@ -4884,13 +5008,318 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="273" parent="268" name="alembic_version_pkc">
+    <key id="291" parent="276" name="alembic_version_pkc">
       <ObjectId>16429</ObjectId>
       <Primary>1</Primary>
       <StateNumber>768</StateNumber>
       <UnderlyingIndexId>16428</UnderlyingIndexId>
     </key>
-    <column id="274" parent="269" name="id">
+    <column id="292" parent="277" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;award_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16662</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="293" parent="277" name="award_name">
+      <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="294" parent="277" name="season_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="295" parent="277" name="award_season_id_fkey">
+      <ColNames>season_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16671</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16637</RefTableId>
+    </foreign-key>
+    <index id="296" parent="277" name="award_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16669</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="297" parent="277" name="award_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16670</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16669</UnderlyingIndexId>
+    </key>
+    <column id="298" parent="278" name="id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="299" parent="278" name="username">
+      <DasType>varchar(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="300" parent="278" name="judge_id_fkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16681</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16440</RefTableId>
+    </foreign-key>
+    <foreign-key id="301" parent="278" name="judge_username_fkey">
+      <ColNames>username</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16686</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>2</RefKeyColPositions>
+      <RefTableId>16440</RefTableId>
+    </foreign-key>
+    <index id="302" parent="278" name="judge_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16679</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="303" parent="278" name="judge_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16680</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16679</UnderlyingIndexId>
+    </key>
+    <column id="304" parent="279" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;match_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16612</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="305" parent="279" name="date">
+      <DasType>timestamp|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="306" parent="279" name="team1">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="307" parent="279" name="team2">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="308" parent="279" name="winner_team_id">
+      <DasType>integer|0s</DasType>
+      <Position>5</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="309" parent="279" name="match_team1_fkey">
+      <ColNames>team1</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16621</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <foreign-key id="310" parent="279" name="match_team2_fkey">
+      <ColNames>team2</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16626</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <foreign-key id="311" parent="279" name="match_winner_team_id_fkey">
+      <ColNames>winner_team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16631</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="312" parent="279" name="match_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16617</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="313" parent="279" name="match_date_key">
+      <ColNames>date</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16619</ObjectId>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="314" parent="279" name="match_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16618</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16617</UnderlyingIndexId>
+    </key>
+    <key id="315" parent="279" name="match_date_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16620</ObjectId>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16619</UnderlyingIndexId>
+    </key>
+    <column id="316" parent="280" name="id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="317" parent="280" name="username">
+      <DasType>varchar(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="318" parent="280" name="team_id">
+      <DasType>integer|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="319" parent="280" name="participant_id_fkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16696</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16440</RefTableId>
+    </foreign-key>
+    <foreign-key id="320" parent="280" name="participant_username_fkey">
+      <ColNames>username</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16706</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>2</RefKeyColPositions>
+      <RefTableId>16440</RefTableId>
+    </foreign-key>
+    <foreign-key id="321" parent="280" name="participant_team_id_fkey">
+      <ColNames>team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16701</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="322" parent="280" name="participant_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16694</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="323" parent="280" name="participant_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16695</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16694</UnderlyingIndexId>
+    </key>
+    <column id="324" parent="281" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;result_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16711</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="325" parent="281" name="match_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="326" parent="281" name="total_score">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="327" parent="281" name="team_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="328" parent="281" name="result_match_id_fkey">
+      <ColNames>match_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16718</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16613</RefTableId>
+    </foreign-key>
+    <foreign-key id="329" parent="281" name="result_team_id_fkey">
+      <ColNames>team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16723</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="330" parent="281" name="result_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16716</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="331" parent="281" name="result_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16717</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16716</UnderlyingIndexId>
+    </key>
+    <column id="332" parent="282" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;role_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4899,14 +5328,14 @@ true posixrules
       <SequenceId>16430</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="275" parent="269" name="title">
+    <column id="333" parent="282" name="title">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>769</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="276" parent="269" name="role_pkey">
+    <index id="334" parent="282" name="role_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16435</ObjectId>
@@ -4915,7 +5344,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="277" parent="269" name="role_title_key">
+    <index id="335" parent="282" name="role_title_key">
       <ColNames>title</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16437</ObjectId>
@@ -4926,20 +5355,307 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="278" parent="269" name="role_pkey">
+    <key id="336" parent="282" name="role_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16436</ObjectId>
       <Primary>1</Primary>
       <StateNumber>769</StateNumber>
       <UnderlyingIndexId>16435</UnderlyingIndexId>
     </key>
-    <key id="279" parent="269" name="role_title_key">
+    <key id="337" parent="282" name="role_title_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16438</ObjectId>
       <StateNumber>769</StateNumber>
       <UnderlyingIndexId>16437</UnderlyingIndexId>
     </key>
-    <column id="280" parent="270" name="id">
+    <column id="338" parent="283" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;score_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16745</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="339" parent="283" name="match_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="340" parent="283" name="judge_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="341" parent="283" name="team_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="342" parent="283" name="score">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="343" parent="283" name="score_match_id_fkey">
+      <ColNames>match_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16757</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16613</RefTableId>
+    </foreign-key>
+    <foreign-key id="344" parent="283" name="score_judge_id_fkey">
+      <ColNames>judge_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16752</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16676</RefTableId>
+    </foreign-key>
+    <foreign-key id="345" parent="283" name="score_team_id_fkey">
+      <ColNames>team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16762</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="346" parent="283" name="score_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16750</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="347" parent="283" name="score_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16751</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16750</UnderlyingIndexId>
+    </key>
+    <column id="348" parent="284" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;season_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16636</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="349" parent="284" name="year">
+      <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="350" parent="284" name="champion_team_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="351" parent="284" name="season_champion_team_id_fkey">
+      <ColNames>champion_team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16645</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="352" parent="284" name="season_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16643</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="353" parent="284" name="season_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16644</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16643</UnderlyingIndexId>
+    </key>
+    <column id="354" parent="285" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;team_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16602</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="355" parent="285" name="title">
+      <DasType>varchar(30)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="356" parent="285" name="city">
+      <DasType>varchar(30)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="357" parent="285" name="year_formed">
+      <DasType>varchar|0s</DasType>
+      <DefaultExpression>to_char((CURRENT_DATE)::timestamp with time zone, &apos;yyyy&apos;::text)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="358" parent="285" name="team_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16610</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="359" parent="285" name="team_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16611</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16610</UnderlyingIndexId>
+    </key>
+    <column id="360" parent="286" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;team_history_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16728</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="361" parent="286" name="match_date">
+      <DasType>timestamp|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="362" parent="286" name="team_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="363" parent="286" name="team_history_match_date_fkey">
+      <ColNames>match_date</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16735</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>2</RefKeyColPositions>
+      <RefTableId>16613</RefTableId>
+    </foreign-key>
+    <foreign-key id="364" parent="286" name="team_history_team_id_fkey">
+      <ColNames>team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16740</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="365" parent="286" name="team_history_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16733</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="366" parent="286" name="team_history_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16734</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16733</UnderlyingIndexId>
+    </key>
+    <column id="367" parent="287" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;team_statistics_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>782</StateNumber>
+      <SequenceId>16650</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="368" parent="287" name="total_games">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="369" parent="287" name="total_wins">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="370" parent="287" name="total_losses">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="371" parent="287" name="team_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="372" parent="287" name="team_statistics_team_id_fkey">
+      <ColNames>team_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16657</ObjectId>
+      <StateNumber>782</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16603</RefTableId>
+    </foreign-key>
+    <index id="373" parent="287" name="team_statistics_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16655</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="374" parent="287" name="team_statistics_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16656</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>782</StateNumber>
+      <UnderlyingIndexId>16655</UnderlyingIndexId>
+    </key>
+    <column id="375" parent="288" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4948,35 +5664,35 @@ true posixrules
       <SequenceId>16439</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="281" parent="270" name="username">
+    <column id="376" parent="288" name="username">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>769</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="282" parent="270" name="hashed_password">
+    <column id="377" parent="288" name="hashed_password">
       <DasType>bytea|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>769</StateNumber>
       <TypeId>17</TypeId>
     </column>
-    <column id="283" parent="270" name="active">
+    <column id="378" parent="288" name="active">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>769</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="284" parent="270" name="role">
+    <column id="379" parent="288" name="role">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>769</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="285" parent="270" name="created_at">
+    <column id="380" parent="288" name="created_at">
       <DasType>timestamp|0s</DasType>
       <DefaultExpression>timezone(&apos;utc&apos;::text, now())</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4984,7 +5700,7 @@ true posixrules
       <StateNumber>769</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="286" parent="270" name="user_role_fkey">
+    <foreign-key id="381" parent="288" name="user_role_fkey">
       <ColNames>role</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16451</ObjectId>
@@ -4992,7 +5708,7 @@ true posixrules
       <RefKeyColPositions>2</RefKeyColPositions>
       <RefTableId>16431</RefTableId>
     </foreign-key>
-    <index id="287" parent="270" name="user_pkey">
+    <index id="382" parent="288" name="user_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16447</ObjectId>
@@ -5001,7 +5717,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="288" parent="270" name="user_username_key">
+    <index id="383" parent="288" name="user_username_key">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16449</ObjectId>
@@ -5012,14 +5728,14 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="289" parent="270" name="user_pkey">
+    <key id="384" parent="288" name="user_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16448</ObjectId>
       <Primary>1</Primary>
       <StateNumber>769</StateNumber>
       <UnderlyingIndexId>16447</UnderlyingIndexId>
     </key>
-    <key id="290" parent="270" name="user_username_key">
+    <key id="385" parent="288" name="user_username_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16450</ObjectId>
       <StateNumber>769</StateNumber>

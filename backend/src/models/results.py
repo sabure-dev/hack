@@ -1,9 +1,9 @@
 from sqlalchemy import text, ForeignKey, String, Integer
 from sqlalchemy.orm import Mapped, mapped_column
 
-from matches import Match
-from teams import Team
-from scores import Score
+from .matches import Match
+from .teams import Team
+from .scores import Score
 from core.database import Base
 
 

@@ -10,7 +10,7 @@ class Match(Base):
     __tablename__ = "match"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    date: Mapped[datetime]
+    date: Mapped[datetime] = mapped_column(unique=True)
     team1: Mapped[int] = mapped_column(ForeignKey("team.id"))
     team2: Mapped[int] = mapped_column(ForeignKey("team.id"))
     winner_team_id: Mapped[int] = mapped_column(ForeignKey("team.id"), nullable=True, default=None)

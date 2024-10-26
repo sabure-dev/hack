@@ -9,6 +9,7 @@ from fastapi import HTTPException
 from sqlalchemy import select
 from fastapi import status
 
+from models import participants as participants_model
 from api.api_v1.users import schemas as user_schemas
 from sqlalchemy.ext.asyncio import AsyncSession
 from models import users as user_models
@@ -39,6 +40,12 @@ async def create_user_crud(user_in: user_schemas.CreateUser, session: AsyncSessi
         await session.commit()
 
         user_model = user_schemas.UserOut.model_validate(new_user)
+
+        participant = participants_model.Participant(id=user_model.id, username=user_in.username)
+
+        session.add(participant)
+
+        await session.commit()
 
         return user_model
     except sqlalchemy.exc.IntegrityError:

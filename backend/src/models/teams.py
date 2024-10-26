@@ -4,7 +4,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from core.database import Base
 
-year_type = Annotated[int, mapped_column(server_default=text("date_part('year', (SELECT current_timestamp))"))]
+year_type = Annotated[str, mapped_column(server_default=text("to_char((CURRENT_DATE), 'yyyy')"))]
 
 
 class Team(Base):
