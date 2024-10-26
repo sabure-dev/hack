@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aba814c-12d0-41ac-8e9f-c5e32b539962" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28244d3a-8620-45d2-93ec-48d515355cf0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28244d3a-8620-45d2-93ec-48d515355cf0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28244d3a-8620-45d2-93ec-48d515355cf0/storage_v2/_src_/database/hack_db.XFKzKA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28244d3a-8620-45d2-93ec-48d515355cf0/storage_v2/_src_/database/hack_db.XFKzKA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4989bb88-71ea-4c00-956e-3c63ad3bdfac.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4989bb88-71ea-4c00-956e-3c63ad3bdfac/storage_v2/_src_/schema/db.fgwAAA.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/api/api_v1/admin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/api/api_v1/admin/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/api/api_v1/judge/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/crud/user_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/crud/user_crud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/migrations/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/results.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/scores.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/scores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/team_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/team_history.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/team_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/team_statistics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/api_v1/users/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/api_v1/users/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/seasons.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/seasons.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +73,7 @@
       <recent name="C:\Users\user\main\progin\hack\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\main\progin\hack\backend\src\api\api_v1\judge" />
       <recent name="C:\Users\user\main\progin\hack\backend\src\models" />
       <recent name="C:\Users\user\main\progin\hack\backend\src" />
       <recent name="C:\Users\user\main\progin\hack\backend" />
@@ -128,7 +122,10 @@
       <updated>1729926327522</updated>
       <workItem from="1729926329821" duration="6372000" />
       <workItem from="1729933512989" duration="14342000" />
-      <workItem from="1729949407470" duration="3914000" />
+      <workItem from="1729949407470" duration="5031000" />
+      <workItem from="1729963789227" duration="749000" />
+      <workItem from="1729964613319" duration="959000" />
+      <workItem from="1729968435385" duration="6911000" />
     </task>
     <servers />
   </component>

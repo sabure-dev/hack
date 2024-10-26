@@ -10,4 +10,4 @@ class Season(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     year: Mapped[str] = mapped_column(nullable=False)
-    champion_team_id: Mapped[int] = mapped_column(ForeignKey("team.id"))
+    champion_team_id: Mapped[int] = mapped_column(ForeignKey("team.id"), nullable=True, default=None)
