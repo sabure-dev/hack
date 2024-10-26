@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from starlette import status
 from .schemas import TeamIn
 
-from models import awards, judges, seasons, scores, matches, users, participants, teams, team_statistics
+from models import awards, judges, seasons, scores, matches, users, participants, teams, team_statistics, team_history
 from core.database import get_session
 from api.api_v1.users import schemas as user_schemas
 from typing import List
@@ -86,7 +86,12 @@ async def create_match(
     team1_stats.total_games = team1_stats.total_games + 1
     team2_stats.total_games = team2_stats.total_games + 1
 
+    new_team_history1 = team_history.TeamHistory(match_date=date, team_id=team1_id)
+    new_team_history2 = team_history.TeamHistory(match_date=date, team_id=team2_id)
+
     session.add(new_match)
+    session.add(new_team_history1)
+    session.add(new_team_history2)
     await session.commit()
 
     return {"message": "Match created successfully"}
