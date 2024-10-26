@@ -3,8 +3,9 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from starlette import status
+from .schemas import TeamIn
 
-from models import awards, judges, seasons, scores, matches, users, participants
+from models import awards, judges, seasons, scores, matches, users, participants, teams, team_statistics
 from core.database import get_session
 from api.api_v1.users import schemas as user_schemas
 from typing import List
@@ -70,6 +71,21 @@ async def create_match(
         team1=team1_id,
         team2=team2_id
     )
+
+    team1_stats_q = await session.execute(
+        select(team_statistics.TeamStatistics).where(team_statistics.TeamStatistics.team_id == team1_id))
+    team1_stats = team1_stats_q.scalars().first()
+
+    team2_stats_q = await session.execute(
+        select(team_statistics.TeamStatistics).where(team_statistics.TeamStatistics.team_id == team2_id))
+    team2_stats = team2_stats_q.scalars().first()
+
+    team1_stats.total_losses = team1_stats.total_losses + 1
+    team2_stats.total_losses = team2_stats.total_losses + 1
+
+    team1_stats.total_games = team1_stats.total_games + 1
+    team2_stats.total_games = team2_stats.total_games + 1
+
     session.add(new_match)
     await session.commit()
 
@@ -116,16 +132,6 @@ async def create_award(
     return {"message": "Award created successfully"}
 
 
-@router.get("/seasons/{season_id}/awards")
-async def get_season_awards(
-        season_id: int,
-        session: AsyncSession = Depends(get_session)
-):
-    awards_q = await session.execute(select(awards.Award).where(awards.Award.season_id == season_id))
-    awards_list = awards_q.scalars().all()
-    return awards_list
-
-
 @router.put("/season/winner")
 async def select_champion(
         season_id: int,
@@ -161,6 +167,34 @@ async def select_match_winner(
 
     match.winner_team_id = new_match_winner_team_id
 
+    team_stat_q = await session.execute(select(team_statistics.TeamStatistics).where(
+        team_statistics.TeamStatistics.team_id == new_match_winner_team_id))
+    team_stat = team_stat_q.scalars().first()
+    team_stat.total_losses = team_stat.total_losses - 1
+    team_stat.total_wins = team_stat.total_wins + 1
+
     await session.commit()
 
     return match
+
+
+@router.post("/teams")
+async def create_team(new_team: TeamIn, current_user: user_schemas.UserOut = Depends(get_current_active_auth_user),
+                      session: AsyncSession = Depends(get_session)):
+    if current_user.role != "admin":
+        raise HTTPException(status_code=403, detail="Not enough permissions")
+
+    new_team_model = teams.Team(**new_team.model_dump())
+    session.add(new_team_model)
+    await session.commit()
+
+    team_q = await session.execute(
+        select(teams.Team).where(teams.Team.city == new_team.city, teams.Team.title == new_team.title,
+                                 teams.Team.year_formed == new_team.year_formed))
+    team = team_q.scalars().first()
+    new_team_statistics = team_statistics.TeamStatistics(team_id=team.id)
+
+    session.add(new_team_statistics)
+    await session.commit()
+
+    return new_team
