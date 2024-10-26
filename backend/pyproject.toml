@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+pythonpath = [
+    ".", "src",
+]
+asyncio_mode="auto"
+markers = [
+    "last: marks the test to run last",
+]
+asyncio_default_fixture_loop_scope = "session"
